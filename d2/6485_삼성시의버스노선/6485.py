@@ -11,4 +11,4 @@ for tc in range(1, T+1):
     for i in range(P):
         if bus_stops[i] in arr:
             bucket[i+1] = bus_stops[i]
-    print(f'{tc} {bucket[i+1]}')
+

@@ -12,4 +12,4 @@ for tc in range(1, T+1):
             max_value = ai[i]
         elif ai[i] < min_value:
             min_value = ai[i]
-    print(f'{tc} {max_value - min_value}')
+    print(f'#{tc} {max_value - min_value}')

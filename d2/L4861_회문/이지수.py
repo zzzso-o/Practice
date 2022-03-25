@@ -2,19 +2,19 @@ import sys
 sys.stdin = open('input.txt')
 
 T = int(input())
-
-def
-    for idx in range(M):
-        if new_list[idx] == new_list[M-idx-1]:
-            bucket[idx] = new_list[idx]
-
-
 for tc in range(1, T+1):
-    N, M = map(int, input().split())
-    arr = list(input() for _ in range(N))
-    print(arr)
-    bucket = [0] * M
+    n, m = map(int, input().split())
+    text = list(input() for _ in range(n))
 
-    for i in range(N):
-        for j in range(N):
-            if arr[i][j] == arr[i][N-j-1]:
+    result = []
+    for i in range(n):
+        for j in range(n-m+1):
+
+            if text[i][j+m] == text[i][j+m][::-1]:
+                result.append(text[i][j])
+
+
+    for i in range(n-m+1):
+        for j in range(n):
+            if text[j][i+m] == text[j][i+m][::-1]:
+                result.append(text[j][i+m])

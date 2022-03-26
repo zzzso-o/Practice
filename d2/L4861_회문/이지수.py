@@ -9,12 +9,16 @@ for tc in range(1, T+1):
     result = []
     for i in range(n):
         for j in range(n-m+1):
-
-            if text[i][j+m] == text[i][j+m][::-1]:
-                result.append(text[i][j])
+            if text[i][j:j+m] == text[i][j:j+m][::-1]:
+                result.append(text[i][j:j+m])
 
 
     for i in range(n-m+1):
         for j in range(n):
-            if text[j][i+m] == text[j][i+m][::-1]:
-                result.append(text[j][i+m])
+            c_list = []
+            for k in range(m):
+                c_list.append(text[i+k][j])
+            if c_list[::] == c_list[::-1]:
+                result.append(''.join(c_list))
+
+    print('#{} {}'.format(tc, result[0]))
